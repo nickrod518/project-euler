@@ -11,7 +11,7 @@ int main() {
   ULL sumOfPrimes = 5;
   
   while (number != 2000000) {
-    for (int i = 2; i <= number/2; ++i) {
+    for (unsigned int i = 2; i <= number/2; ++i) {
       if (number%i == 0) {
         number++;
         break;
