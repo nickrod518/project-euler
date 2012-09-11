@@ -4,9 +4,9 @@ using std::cout;
 using std::endl;
 
 int main() {
-  int number = 4;
+  unsigned int number = 4;
   bool prime = false;
-  int primeNum = 2;
+  unsigned int primeNum = 2;
   
   while (primeNum != 10001) {
     for (int i = 2; i <= number/2; ++i) {
@@ -23,12 +23,10 @@ int main() {
     if (prime == true) {
       number++;
       primeNum++;
-      cout << "primeNum: " << primeNum << endl;
     }
   }
 
   cout << "primeNum: " << primeNum << endl;
-  cout << "number: " << (number-1) << endl;
 
   return 0;
 }
