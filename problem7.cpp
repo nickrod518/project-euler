@@ -15,9 +15,8 @@ int main() {
         prime = false;
         break;
       }
-      else {
+      else
         prime = true;
-      }
     }
   
     if (prime == true) {
