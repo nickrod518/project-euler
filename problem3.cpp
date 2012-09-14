@@ -8,9 +8,11 @@ typedef unsigned long long int ULL;
 bool isPrime(ULL num);
 
 int main() {
-  ULL test = 13195;
-  ULL number = 13195; // answer is 29
-  // question is 600851475143
+//  ULL test = 13195;
+//  ULL number = 13195; // answer is 29
+  ULL test = 600851475143;
+  ULL number = 600851475143;
+
   bool done = false;
 
   while (done == false) {
