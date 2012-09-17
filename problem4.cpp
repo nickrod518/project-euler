@@ -10,7 +10,7 @@ using std::string;
 string toString(int number);
 
 int main() {
-  int number;
+  int number, largest = 0;
   string s;
 
   for (int i = 100; i < 1000; ++i) {
@@ -18,15 +18,20 @@ int main() {
       number = i*j;
       s = toString(number);
       if (number < 100000) {
-        if (s[0] == s[4] && s[1] == s[3])
-          cout << number << endl;
+        if (s[0] == s[4] && s[1] == s[3]) {
+          if (number > largest)
+            largest = number;
+        }
       }
       else {
-        if (s[0] == s[5] && s[1] == s[4] && s[2] == s[3])
-          cout << number << endl;
+        if (s[0] == s[5] && s[1] == s[4] && s[2] == s[3]) {
+          if (number > largest)
+            largest = number;
+        }
       }
     }
   }
+  cout << largest << endl;
 
   return 0;
 }
