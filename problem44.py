@@ -1,30 +1,30 @@
-def Pentagonal(n):
-    p = int(n * (3 * n - 1) / 2)
+def pentagonal(n):
+    p = int(n*(3*n - 1)/2)
     return p
 
 
-pList = []
+p_list = []
 finished = False
 n = 1
 
 while finished != True:
 
-    p = Pentagonal(n)
-    pList.append(p)
+    p = pentagonal(n)
+    p_list.append(p)
 
-    for k in pList:
-        for j in pList:
+    for k in p_list:
+        for j in p_list:
             sum = j + k
 
-            if sum in pList:
+            if sum in p_list:
                 print("j: " + str(j))
                 print("k: " + str(k))
                 print("sum: " + str(sum))
 
-                diff = abs(k - j)
+                diff = abs(k-j)
 
-                if diff in pList:
+                if diff in p_list:
                     print("diff: " + str(diff))
                     finished = True
 
-    n += 1
+    n = n + 1

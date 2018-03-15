@@ -1,25 +1,25 @@
-def GetCollatzTerms(startingNum):
-    chainLength = 1
-    num = startingNum
+def get_collatz_terms(starting_num):
+    chain_length = 1
+    num = starting_num
 
     while num > 1:
         if num % 2 == 0:
-            num = num / 2
+            num = num/2
         else:
-            num = num * 3 + 1
+            num = num*3 + 1
 
-        chainLength += 1
+        chain_length = chain_length + 1
 
-    return chainLength
+    return chain_length
 
 
-longestChainLength = 1
+longest_chain_length = 1
 
 for i in range(1, 1000000):
-    chainLength = GetCollatzTerms(i)
+    chain_length = get_collatz_terms(i)
 
-    if chainLength > longestChainLength:
-        longestChainLength = chainLength
+    if chain_length > longest_chain_length:
+        longest_chain_length = chain_length
 
         print("Starting Number: " + str(i))
-        print("Chain Length: " + str(chainLength))
+        print("Chain Length: " + str(chain_length))
